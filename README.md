@@ -9,7 +9,9 @@ A [HACS](https://hacs.xyz) custom integration that controls Uplift standing desk
 
 ## Installation
 
-1. In HACS, open the menu, choose **Custom repositories**, and add `https://github.com/dsluo/uplift-ble-hass` as an **Integration**.
+[![Open your Home Assistant instance and open this repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=dsluo&repository=uplift-ble-hass&category=integration)
+
+1. Click the button above, or in HACS open the menu, choose **Custom repositories**, and add `https://github.com/dsluo/uplift-ble-hass` as an **Integration**.
 2. Install **Uplift Desk (BLE)** and restart Home Assistant.
 3. Desks advertising a supported service (`0x00FF`, `0xFE60`, `0xFF00`, `0xFF12`) are discovered automatically. You can also add one manually from **Settings > Devices & services > Add integration > Uplift Desk (BLE)**.
 
