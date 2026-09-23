@@ -1,0 +1,177 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "description": "Choose a desk to set up. The desk can be moved by anything in Bluetooth range once added, so keep it clear of obstacles while testing.",
+        "data": {
+          "address": "Device"
+        }
+      },
+      "bluetooth_confirm": {
+        "description": "Set up {name}? The desk can be moved by anything in Bluetooth range once added, so keep it clear of obstacles while testing."
+      },
+      "settings": {
+        "title": "Connection settings",
+        "data": {
+          "connection_mode": "Connection mode",
+          "fallback_unit": "Fallback display unit",
+          "idle_timeout": "Idle disconnect timeout"
+        },
+        "data_description": {
+          "connection_mode": "Persistent stays connected for live height updates but keeps a Bluetooth connection slot busy. On demand connects only to send commands.",
+          "fallback_unit": "Unit used to interpret height reports if the desk never reports its display unit. Pick the unit your keypad shows, or leave as none.",
+          "idle_timeout": "On demand mode only: disconnect after this long without commands or movement."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the desk",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "already_in_progress": "Configuration flow is already in progress",
+      "no_devices_found": "No supported desks found nearby",
+      "not_supported": "This device does not expose a supported desk profile"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Connection settings",
+        "data": {
+          "connection_mode": "Connection mode",
+          "fallback_unit": "Fallback display unit",
+          "idle_timeout": "Idle disconnect timeout"
+        },
+        "data_description": {
+          "connection_mode": "Persistent stays connected for live height updates but keeps a Bluetooth connection slot busy. On demand connects only to send commands.",
+          "fallback_unit": "Unit used to interpret height reports if the desk never reports its display unit. Pick the unit your keypad shows, or leave as none.",
+          "idle_timeout": "On demand mode only: disconnect after this long without commands or movement."
+        }
+      }
+    }
+  },
+  "selector": {
+    "connection_mode": {
+      "options": {
+        "persistent": "Persistent",
+        "on_demand": "On demand"
+      }
+    },
+    "fallback_unit": {
+      "options": {
+        "none": "None",
+        "centimeters": "Centimeters",
+        "inches": "Inches"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "move_to_preset": {
+        "name": "Move to preset {preset}"
+      },
+      "move_up": {
+        "name": "Move up"
+      },
+      "move_down": {
+        "name": "Move down"
+      },
+      "stop": {
+        "name": "Stop"
+      },
+      "save_preset": {
+        "name": "Save current height as preset {preset}"
+      },
+      "set_current_height_as_max_limit": {
+        "name": "Set current height as max limit"
+      },
+      "set_current_height_as_min_limit": {
+        "name": "Set current height as min limit"
+      },
+      "clear_max_limit": {
+        "name": "Clear max height limit"
+      },
+      "clear_min_limit": {
+        "name": "Clear min height limit"
+      },
+      "reset": {
+        "name": "Reset desk"
+      },
+      "refresh": {
+        "name": "Refresh settings"
+      }
+    },
+    "event": {
+      "desk_event": {
+        "name": "Desk alert",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "e01": "E01: M1 overcurrent",
+              "e02": "E02: M2 overcurrent",
+              "e03": "E03: M3 overcurrent",
+              "e04": "E04: M4 overcurrent",
+              "e05": "E05",
+              "e06": "E06",
+              "e07": "E07: M1 hall error",
+              "e08": "E08: M2 hall error",
+              "e09": "E09: M3 hall error",
+              "e10": "E10: M4 hall error",
+              "e11": "E11",
+              "e12": "E12",
+              "e13": "E13",
+              "h01": "H01: Overheat protection",
+              "h02": "H02",
+              "lock": "Locked",
+              "reset": "Manual reset required"
+            }
+          }
+        }
+      }
+    },
+    "number": {
+      "target_height": {
+        "name": "Target height"
+      },
+      "height_limit_max": {
+        "name": "Max height limit"
+      },
+      "calibration_offset": {
+        "name": "Calibration offset"
+      }
+    },
+    "select": {
+      "display_unit": {
+        "name": "Display unit",
+        "state": {
+          "centimeters": "Centimeters",
+          "inches": "Inches"
+        }
+      },
+      "touch_mode": {
+        "name": "Touch mode",
+        "state": {
+          "one_touch": "One touch",
+          "constant_touch": "Constant touch"
+        }
+      }
+    },
+    "sensor": {
+      "height": {
+        "name": "Height"
+      },
+      "height_limit_min": {
+        "name": "Min height limit"
+      },
+      "height_limit_max": {
+        "name": "Max height limit"
+      },
+      "height_preset_raw": {
+        "name": "Preset {preset} raw value"
+      }
+    }
+  }
+}
